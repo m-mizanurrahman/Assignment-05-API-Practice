@@ -5,9 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-05 | API Practice</title>
+    <link rel="shortcut icon" href="image/Screenshot_1.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="app.js"></script>
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="inputLocation" type="text" class="form-control" placeholder="Enter a Meal Name">
+                <div class="input-group-append">
+                    <button onclick="getMeal(inputLocation)" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="mealDetail">
+    </div>
+    <div id="meals">
+    </div>
+    <script src="app.js">
+    </script>
 </body>
 </html>
+

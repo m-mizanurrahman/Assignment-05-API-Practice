@@ -1,21 +1,22 @@
-
-#meals{
+#countries{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
 }
-.meal{
+.country{
     border: 1px solid goldenrod;
     border-radius: 20px;
     padding: 20px;
     text-align: center;
     width: 300px;
 }
-.meal-name{
+
+.country-name{
     font-size: 45px;
     color: magenta;
+
 }
-#mealDetail img{
-    width: 500px;
-    height: 350px;
+
+#countryDetail img{
+    width: 400px;
 }

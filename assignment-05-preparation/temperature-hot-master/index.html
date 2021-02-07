@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/bg-image.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="inputLocation" type="text" class="form-control" placeholder="Enter a location for Weather ">
+                <div class="input-group-append">
+                    <button onclick="getWeather(inputLocation)" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+        <div class="weather-status text-white text-center">
+            <img id="icon" src="" alt="">
+            <h1 id="locationName"></h1>
+            <h3><span id="tempValue"></span>&deg;C</h3>
+            <h1 id="description" class="lead"></h1>
+        </div>
+    </div>
+
+
+    <script>
+        const inputLocation = document.getElementById('inputLocation');
+        function getWeather(inputLocation) {
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=' + inputLocation.value + '&appid=19f107ff6c2d0da705f7206ed97c731d')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('locationName').innerText = data.name;
+                    document.getElementById('tempValue').innerText = Math.round(data.main.temp - 273.15);
+                    document.getElementById('description').innerText = data.weather[0].description;
+                    document.getElementById('icon').setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+                })
+                .catch(error => {
+                    document.getElementById('locationName').innerText = 'You entered a wrong city name!';
+                    document.getElementById('tempValue').innerText = '';
+                    document.getElementById('description').innerText = '';
+                    document.getElementById('icon').setAttribute('src', '');
+                })
+        }
+    </script>
+</body>
+
+</html>
