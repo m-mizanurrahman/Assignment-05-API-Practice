@@ -1,8 +1,11 @@
 const inputMealName = document.getElementById('inputMealName');
 const getMeal = inputMealName => {
-    fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=' + inputMealName.value + '')
+    fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=' + inputMealName.value + '')
         .then(res => res.json())
-        .then(data => displayMeals(data.meals));
+        .then(data => displayMeals(data.meals))
+        .catch(error => {
+            alert('Meal name not found!')
+        })
 }
 const displayMeals = meals => {
     const mealsDiv = document.getElementById('meals');
@@ -30,16 +33,16 @@ const displayMealDetail = id => {
         mealDiv.innerHTML = `
         <img src="${meal.strMealThumb}" alt="" width="200" height="150">        
          <h1> Ingredient: </h1>          
-         <p>${meal.strIngredient1}</p>
-         <p>${meal.strIngredient2}</p>
-         <p>${meal.strIngredient3}</p>
-         <p>${meal.strIngredient4}</p>
-         <p>${meal.strIngredient5}</p>
-         <p>${meal.strIngredient6}</p>
-         <p>${meal.strIngredient7}</p>
-         <p>${meal.strIngredient8}</p>
-         <p>${meal.strIngredient9}</p>
-         <p>${meal.strIngredient10}</p>        
+         <p>${meal.strIngredient1}: ${meal.strMeasure1}</p>
+         <p>${meal.strIngredient2}: ${meal.strMeasure2}</p>
+         <p>${meal.strIngredient3}: ${meal.strMeasure3}</p>
+         <p>${meal.strIngredient4}: ${meal.strMeasure4}</p>
+         <p>${meal.strIngredient5}: ${meal.strMeasure5}</p>
+         <p>${meal.strIngredient6}: ${meal.strMeasure6}</p>
+         <p>${meal.strIngredient7}: ${meal.strMeasure7}</p>
+         <p>${meal.strIngredient8}: ${meal.strMeasure8}</p>
+         <p>${meal.strIngredient9}: ${meal.strMeasure9}</p>
+         <p>${meal.strIngredient10}: ${meal.strMeasure10}</p>        
    `
     }
 }
