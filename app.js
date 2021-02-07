@@ -13,9 +13,8 @@ const displayMeals = meals => {
                 <div onclick="displayMealDetail('${meal.idMeal}')">
                 <img src="${meal.strMealThumb}" alt="" width="200" height="150">
                   <h3 class="meal-name">${meal.strMeal}</h3>                  
-                </div>                
-                  
-            `;
+                </div>
+                `;
         mealDiv.innerHTML = mealInfo;
         mealsDiv.appendChild(mealDiv);
     });
