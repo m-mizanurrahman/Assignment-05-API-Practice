@@ -1,6 +1,6 @@
-const inputLocation = document.getElementById('inputLocation');
-const getMeal = inputLocation => {
-    fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=' + inputLocation.value + '')
+const inputMealName = document.getElementById('inputMealName');
+const getMeal = inputMealName => {
+    fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=' + inputMealName.value + '')
         .then(res => res.json())
         .then(data => displayMeals(data.meals));
 }
