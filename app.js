@@ -9,6 +9,7 @@ const getMeal = inputMealName => {
 }
 const displayMeals = meals => {
     const mealsDiv = document.getElementById('meals');
+    mealsDiv.innerHTML = '';
     meals.forEach(meal => {
         const mealDiv = document.createElement('div');
         mealDiv.className = 'meal';
@@ -19,7 +20,7 @@ const displayMeals = meals => {
                 </div>
                 `;
         mealDiv.innerHTML = mealInfo;
-        mealsDiv.appendChild(mealDiv);
+        mealsDiv.appendChild(mealDiv);        
     });
 }
 const displayMealDetail = id => {
@@ -29,6 +30,7 @@ const displayMealDetail = id => {
         .then(data => renderCountryInfo(data.meals[0]));
     const renderCountryInfo = meal => {
         const mealDiv = document.getElementById('mealDetail');
+        mealDiv.innerHTML = '';
         console.log(meal);
         mealDiv.innerHTML = `
         <img src="${meal.strMealThumb}" alt="" width="200" height="150"> 
