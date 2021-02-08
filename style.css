@@ -1,3 +1,6 @@
+body{
+    margin: 5%;
+}
 #meals{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -17,4 +20,10 @@
 #mealDetail img{
     width: 500px;
     height: 350px;
+}
+#singleMealDetail{
+    margin-left: 20%;
+}
+#input-search{
+    text-align: right;
 }
