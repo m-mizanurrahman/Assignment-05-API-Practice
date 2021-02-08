@@ -35,26 +35,26 @@ const displayMealDetail = id => {
                 <h1>${meal.strMeal}</h1>        
                 <h2>Ingredient:</h2>
                 <ul>
-                    <li>${meal.strIngredient1}- ${meal.strMeasure1}</li>
-                    <li>${meal.strIngredient2}- ${meal.strMeasure2}</li>
-                    <li>${meal.strIngredient3}- ${meal.strMeasure3}</li>
-                    <li>${meal.strIngredient4}- ${meal.strMeasure4}</li>
-                    <li>${meal.strIngredient5}- ${meal.strMeasure5}</li>
-                    <li>${meal.strIngredient6}- ${meal.strMeasure6}</li>
-                    <li>${meal.strIngredient7}- ${meal.strMeasure7}</li>
-                    <li>${meal.strIngredient8}- ${meal.strMeasure8}</li>
-                    <li>${meal.strIngredient9}- ${meal.strMeasure9}</li> 
-                    <li>${meal.strIngredient10}- ${meal.strMeasure10}</li>
-                    <li>${meal.strIngredient11}- ${meal.strMeasure11}</li>
-                    <li>${meal.strIngredient12}- ${meal.strMeasure12}</li>
-                    <li>${meal.strIngredient13}- ${meal.strMeasure13}</li>
-                    <li>${meal.strIngredient14}- ${meal.strMeasure14}</li>
-                    <li>${meal.strIngredient15}- ${meal.strMeasure15}</li>
-                    <li>${meal.strIngredient16}- ${meal.strMeasure16}</li>
-                    <li>${meal.strIngredient17}- ${meal.strMeasure17}</li>
-                    <li>${meal.strIngredient18}- ${meal.strMeasure18}</li>
-                    <li>${meal.strIngredient19}- ${meal.strMeasure19}</li> 
-                    <li>${meal.strIngredient20}- ${meal.strMeasure20}</li>                       
+                    <li>${meal.strMeasure1} ${meal.strIngredient1}</li>
+                    <li>${meal.strMeasure2} ${meal.strIngredient2}</li>
+                    <li>${meal.strMeasure3} ${meal.strIngredient3}</li>
+                    <li>${meal.strMeasure4} ${meal.strIngredient4}</li>
+                    <li>${meal.strMeasure5} ${meal.strIngredient5}</li>
+                    <li>${meal.strMeasure6} ${meal.strIngredient6}</li>
+                    <li>${meal.strMeasure7} ${meal.strIngredient7}</li>
+                    <li>${meal.strMeasure8} ${meal.strIngredient8}</li>
+                    <li>${meal.strMeasure9} ${meal.strIngredient9}</li>
+                    <li>${meal.strMeasure10} ${meal.strIngredient10}</li>
+                    <li>${meal.strMeasure11} ${meal.strIngredient11}</li>
+                    <li>${meal.strMeasure12} ${meal.strIngredient12}</li>
+                    <li>${meal.strMeasure13} ${meal.strIngredient13}</li>
+                    <li>${meal.strMeasure14} ${meal.strIngredient14}</li>
+                    <li>${meal.strMeasure15} ${meal.strIngredient15}</li>
+                    <li>${meal.strMeasure16} ${meal.strIngredient16}</li>
+                    <li>${meal.strMeasure17} ${meal.strIngredient17}</li>
+                    <li>${meal.strMeasure18} ${meal.strIngredient18}</li>
+                    <li>${meal.strMeasure19} ${meal.strIngredient19}</li>
+                    <li>${meal.strMeasure20} ${meal.strIngredient20}</li>                     
                 </ul>         
         </div>`
     }
